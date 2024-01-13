@@ -5,6 +5,7 @@ if (number % 3 === 0) {
   console.log(number)
 }
 
+// TRY
 for (let n = 1; n <= number; n++) {
   if (n % 3 === 0) {
     console.log(n + "!!!!!!!")
@@ -22,6 +23,7 @@ const genkiFunction = function (number) {
     }
   }
 }
+genkiFunction(100)
 
 /* FizzBuzz */
 const FizzBuzz = function (number) {
@@ -36,11 +38,17 @@ const FizzBuzz = function (number) {
         console.log(n);
   }
 }
+FizzBuzz(30)
 
 /* 3が大好き */
-const genki3Function = function (number) {
-  for (let n = 1; n <= number; n++) {
-    if (n.search("3") && n % 3 !== 0) console.log("元気！")
-    else console.log(n);
+const genki3Function = function (num) {
+  for (let n = 1; n <= num; n++) {
+    if (n.toString().includes("3") && n % 3 !== 0)
+      console.log("元気！");
+    else 
+      console.log(n);
   }
 }
+genki3Function(34)
+
+/* 元気な秒針 */
