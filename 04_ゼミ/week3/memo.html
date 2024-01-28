@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>メモ帳</h1>
+    <div>
+      <input type="text" id="input-text" />
+      <button id="add-button">追加</button>
+    </div>
+    <div id="memo-container"></div>
+
+    <script>
+      const inputElement = document.getElementById("input-text")
+      const addButton = document.getElementById("add-button")
+      const memoContainer = document.getElementById("memo-container")
+
+      let memos = []
+      if (localStorage.memos) {
+        const memosJson = localStorage.memos
+        memos = JSON.parse(memosJson)
+        for (let i = 0; i < memos.length; i++) {
+          const div = document.createElement("div")
+          div.textContent = memos[i]
+          memoContainer.append(div)
+        }
+      }
+
+      addButton.onclick = function () {
+        memos.push(inputElement.value)
+        localStorage.memos = JSON.stringify(memos)
+
+        memoContainer.textContent = ""
+        for (let i = 0; i < memos.length; i++) {
+          const card = document.createElement("div")
+          card.textContent = memos[i]
+          memoContainer.append(card)
+        }
+      }
+    </script>
+  </body>
+</html>
