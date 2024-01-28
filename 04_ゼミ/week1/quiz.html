@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <h1>一番好きなお笑い芸人はどれでしょう？</h1>
+    <button id="button-1">東京03</button>
+    <button id="button-2">Non Style</button>
+    <button id="button-3">かまいたち</button>
+    <div id="answer">答え</div>
+
+    <script>
+      const button1 = document.getElementById("button-1")
+      const button2 = document.getElementById("button-2")
+      const button3 = document.getElementById("button-3")
+      const answer = document.getElementById("answer")
+
+      button1.onclick = function () {
+        answer.textContent =
+          "正解！一番好きなネタは「蓄積」というネタです！ぜひ見てみてください。人間の細かい気持ちに着目してるところがおもろいです。"
+      }
+      button2.onclick = function () {
+        answer.textContent =
+          "残念！めっちゃ好きなんだけど一番ではないです、石田派です。"
+      }
+      button3.onclick = function () {
+        answer.textContent =
+          "残念！めっちゃ好きなんだけど一番ではないです、かまいたちのYoutubeチャンネルの「ネオミルクボーイ」は永遠に見れます！"
+      }
+    </script>
+  </body>
+</html>
