@@ -2,8 +2,22 @@ const figure = document.getElementById("figure")
 const squareButton = document.getElementById("square-button")
 const circleButton = document.getElementById("circle-button")
 const triangleButton = document.getElementById("triangle-button")
+const changeClass = (class)=>{
+  if (class = "rounded") {
+    figure.classList.remove("")
+  } else if {
+
+  } else {
+    
+  }
+
+}
 
 figure.onclick = function () {
+  if(figure.classList= class){
+
+
+  }
   figure.classList.toggle("rounded")
   figure.classList.add("square")
   figure.classList.remove("triangle")

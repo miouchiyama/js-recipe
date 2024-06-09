@@ -19,8 +19,8 @@
       const memoContainer = document.getElementById("memo-container")
 
       let memos = []
-      if (localStorage.memos) {
-        const memosJson = localStorage.memos
+      if (localStorage.mentors) {
+        const memosJson = localStorage.mentors
         memos = JSON.parse(memosJson)
         for (let i = 0; i < memos.length; i++) {
           const div = document.createElement("div")
@@ -30,8 +30,9 @@
       }
 
       addButton.onclick = function () {
+        console.log(memos)
         memos.push(inputElement.value)
-        localStorage.memos = JSON.stringify(memos)
+        localStorage.mentors = JSON.stringify(memos)
 
         memoContainer.textContent = ""
         for (let i = 0; i < memos.length; i++) {
